@@ -3,3 +3,4 @@ My solutions to the [Advent of Code](https://adventofcode.com/) challenges. A se
 
 ## Years participated in:
 - 2022 (Rust)
+- 2023 (Python)
