@@ -1,10 +1,10 @@
 import time
-import day9
+import day17
 
 def main():
     start_time = time.time()
     
-    day9.part2()
+    day17.part2()
 
     elapsed = (time.time() - start_time) * 1000
     print(f"Execution time: {elapsed}ms")
