@@ -45,3 +45,23 @@ def step_increment(dir):
 def step(pos, dir):
     increment = step_increment(dir)
     return (pos[0] + increment[0], pos[1] + increment[1])
+
+def get_direction(prev, cur):
+    if cur[1] < prev[1]:
+        return Direction.NORTH
+    if cur[0] > prev[0]:
+        return Direction.EAST
+    if cur[1] > prev[1]:
+        return Direction.SOUTH
+    return Direction.WEST
+
+def get_rotation(prev_dir, cur_dir):
+    if prev_dir == cur_dir:
+        return 0
+    if cur_dir.value == (prev_dir.value + 1) % 4:
+        return 1
+    if cur_dir.value == (prev_dir.value - 1) % 4:
+        return -1
+    
+    print("invalid rotation")
+    exit()
